@@ -11,6 +11,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .container {
@@ -591,6 +592,53 @@ footer {
     margin-right: 20px;
 }
 
+.burger-block{
+    width: 30px;
+    height: 23px;
+    background-image: url(../img/burger.png);
+    display: none;
+}
+
+.burger{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.header__nav{
+    display: none;
+}
+
+.close{
+    width: 23px;
+    height: 25px;
+    background-image: url(../img/burger-close.png);
+}
+
+.burger_list{
+    
+}
+
+.header__nav--active{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #E8E6E2;
+    box-shadow: 0 0 10px #888;
+}
+
 @media screen and (max-width: 1200px) {
     .about-photos img{
         max-width: 440px;
@@ -603,7 +651,7 @@ footer {
         height: 90px;
     }
     
-    .logo, .logo img{
+    .logo img{
         height: 84px;
         width: 60px;
     }
@@ -700,26 +748,21 @@ footer {
     }
 }
 
-/* Мобильные устройства (до 768px) */
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 95%;
-        padding: 0 15px;
+        max-width: 100%;
+        padding: 0 20px;
     }
 
-    /* Хедер */
     header {
-        height: auto;
-        min-height: 80px;
+        height: 80px;
     }
 
     .header-container {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
+        padding: 20px;
     }
 
-    header img {
+    .logo img {
         height: 70px;
         width: 55px;
     }
@@ -727,7 +770,7 @@ footer {
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 20px;
     }
 
     .nav_button-link button {
@@ -924,6 +967,16 @@ footer {
         width: 100%;
         height: 250px;
     }
+}
+
+@media screen and (max-width: 610px) {
+    nav{
+        display: none;
+    }
+    .burger-block{
+        display: block;
+    }
+
 }
 
 /* Очень маленькие телефоны (до 480px) */
