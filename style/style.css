@@ -91,7 +91,7 @@ nav li {
 }
 
 .main_container {
-    background-image: url(../img/main_back.jpg);
+    background-image: url(../img/main_back.svg);
     background-size: cover;
     background-position: center;
 }
@@ -600,8 +600,9 @@ footer {
 .burger-block{
     width: 30px;
     height: 23px;
-    background-image: url(../img/burger.png);
+    background-image: url(../img/burger.svg);
     display: none;
+    background-position: center;
 }
 
 .burger{
