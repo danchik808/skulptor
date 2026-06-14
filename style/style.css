@@ -90,6 +90,46 @@ nav li {
     transition: 0.2s;
 }
 
+.close-block{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+.close{
+    display: flex;
+}
+
+.header__nav--active{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.burger_list{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #252525;
+    font-family: "Inter", serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.2px;
+}
+
+.burger_list li{
+    display: flex;
+    justify-content: center;
+}
+
 .main_container {
     background-image: url(../img/main_back.svg);
     background-size: cover;
