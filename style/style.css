@@ -448,11 +448,11 @@ nav li {
 .swiper-slide {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 40px;
-    padding: 0 10px;
-    max-width: 1090px !important;
-    width: 100%;
+    padding: 0 15px;
+    height: 100%;
+    width: 100% !important;
+    box-sizing: border-box;
 }
 
 .review-card {
@@ -462,6 +462,8 @@ nav li {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-sizing: border-box;
+    height: 100%;
 }
 
 .name-star_block {
@@ -486,6 +488,7 @@ nav li {
     width: 96px;
     height: 15px;
     background-image: url(../img/stars.svg);
+    background-repeat: no-repeat;
 }
 
 .review-text {
@@ -642,12 +645,6 @@ footer {
         max-width: 440px;
         max-height: 300px;
         height: auto;
-    }
-}
-
-@media screen and (max-width: 1150px) {
-    .swiper-slide {
-        padding: 0;
     }
 }
 
@@ -917,6 +914,13 @@ footer {
     .swiper-slide {
         grid-template-columns: 1fr !important;
         gap: 20px;
+    }
+
+    .review-card:nth-child(6){
+        display: none;
+    }
+    .review-card:nth-child(5){
+        display: none;
     }
 
     .review-card {
