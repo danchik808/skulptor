@@ -10,6 +10,11 @@
     align-items: center;
     z-index: 9999;
     transition: opacity 0.3s;
+    gap: 15px;
+}
+
+.preloader p{
+    font-family: "Inter", serif;
 }
 
 .spinner {
