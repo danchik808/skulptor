@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="spinner"></div>
+        <p>Загрузка...</p>
+    </div>
     <div style="display: none;" aria-hidden="true">
         <img src="img/logo.png" alt="">
         <img src="img/burger.svg" alt="">
@@ -746,6 +750,15 @@
         const year = new Date().getFullYear();
         const yearElements = document.querySelectorAll('.current-year');
         yearElements.forEach(el => el.textContent = year);
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 300);
+        });
     </script>
 </body>
 
