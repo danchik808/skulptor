@@ -13,7 +13,7 @@
     gap: 15px;
 }
 
-.preloader p{
+.preloader p {
     font-family: "Inter", serif;
 }
 
@@ -27,8 +27,13 @@
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 html {
@@ -738,7 +743,7 @@ footer {
     gap: 10px;
 }
 
-.personal-cards{
+.personal-cards {
     margin-top: 30px;
 }
 
@@ -749,12 +754,17 @@ footer {
     border-radius: 20px;
 }
 
-.personal_card img{
+.personal_card img {
     border-radius: 20px;
     padding-bottom: 10px;
+    box-sizing: border-box;
+    width: 280px;
+    height: 290px;
+    object-fit: cover;
+    object-position: top;
 }
 
-.personal_headline{
+.personal_headline {
     margin: 0;
     padding: 0;
     padding-bottom: 10px;
@@ -766,7 +776,7 @@ footer {
     line-height: 31.2px;
 }
 
-.personal_text{
+.personal_text {
     margin: 0;
     padding: 0;
     color: #111;
@@ -793,40 +803,23 @@ footer {
     transition: 0.2s;
 }
 
-@media screen and (max-width: 1024px) {
-    .personal_card {
-        max-width: 260px;
-    }
-
-    .personal_card img{
-        max-width: 220px;
-    }
+.sert_head {
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .personal_card {
-        width: 240px;
-    }
-    
-    .personal_headline {
-        font-size: 20px;
-        line-height: 26px;
-    }
-    
-    .personal_text {
-        font-size: 14px;
-    }
-    
-    .personal_btn {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
 }
 
-@media screen and (max-width: 480px) {
-    .personal_card {
-        width: 260px;
-    }
+.grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
 }
 
 @media screen and (max-width: 1200px) {
@@ -838,6 +831,23 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid img:nth-child(1),
+    .grid img:nth-child(2) {
+        display: none;
+    }
+
+    .personal_card {
+        max-width: 260px;
+    }
+
+    .personal_card img {
+        max-width: 220px;
+    }
+
     header {
         height: 90px;
     }
@@ -945,6 +955,33 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .personal_card {
+        width: 240px;
+    }
+
+    .personal_headline {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .personal_card img {
+        max-width: 200px;
+        max-height: 240px;
+    }
+
+    .personal_text {
+        font-size: 14px;
+    }
+
+    .personal_btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
     .ac-panel_item_title {
         max-width: 100%;
     }
@@ -1196,10 +1233,12 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
-    .btn_us1{
+
+    .btn_us1 {
         display: none;
     }
-    .btn_us2{
+
+    .btn_us2 {
         display: block !important;
     }
 }
@@ -1213,10 +1252,13 @@ footer {
         background-image: none;
         padding: 10px 18px;
     }
-
 }
 
 @media screen and (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .main-headline {
         font-size: 32px;
     }
@@ -1253,6 +1295,10 @@ footer {
 
     .review-card {
         padding: 15px;
+    }
+
+    .personal_card {
+        width: 260px;
     }
 }
 
